@@ -1,0 +1,656 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<title>جيورداني جولد إسينزا | العطر الفاخر ديال Oriflame</title>
+<meta name="description" content="عطر جيورداني جولد إسينزا الأصلي + هدية كريم الجسم المعطر. توصيل لجميع مدن المغرب، الخلاص عند الاستلام.">
+
+<!-- ============================================================
+     META PIXEL — عمر META_PIXEL_ID تحت بالرقم ديال البيكسل ديالك
+============================================================ -->
+<script>
+  // 👇 حط هنا رقم البيكسل ديالك (Meta Pixel ID)
+  const META_PIXEL_ID = "XXXXXXXXXXXXXXX";
+
+  !function(f,b,e,v,n,t,s){if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+  n.callMethod.apply(n,arguments):n.queue.push(arguments)};if(!f._fbq)f._fbq=n;
+  n.push=n;n.loaded=!0;n.version='2.0';n.queue=[];t=b.createElement(e);t.async=!0;
+  t.src=v;s=b.getElementsByTagName(e)[0];s.parentNode.insertBefore(t,s)}(window,
+  document,'script','https://connect.facebook.net/en_US/fbevents.js');
+  fbq('init', META_PIXEL_ID);
+  fbq('track', 'PageView');
+</script>
+<noscript>
+  <!-- 👇 نفس رقم البيكسل خاصو يتحط هنا فـ src -->
+  <img height="1" width="1" style="display:none"
+  src="https://www.facebook.com/tr?id=XXXXXXXXXXXXXXX&ev=PageView&noscript=1"/>
+</noscript>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cairo:wght@600;700;800;900&family=Tajawal:wght@400;500;700;900&display=swap" rel="stylesheet">
+
+<style>
+  :root{
+    --black: #14100b;
+    --black-2: #1f1911;
+    --cream: #fbf5e9;
+    --cream-2: #f3e9d2;
+    --gold: #c9a227;
+    --gold-light: #e8cf7a;
+    --gold-deep: #9c7d1c;
+    --text-dark: #221a10;
+    --text-soft: #6b5c3d;
+    --danger: #b3261e;
+    --radius: 14px;
+    --shadow: 0 10px 30px rgba(20,16,11,0.18);
+  }
+
+  *{margin:0;padding:0;box-sizing:border-box;}
+
+  html{scroll-behavior:smooth;}
+
+  body{
+    font-family:'Tajawal', sans-serif;
+    background:var(--cream);
+    color:var(--text-dark);
+    line-height:1.7;
+    padding-top:58px;
+  }
+
+  h1,h2,h3,.display{
+    font-family:'Cairo', sans-serif;
+  }
+
+  img{max-width:100%;display:block;}
+
+  .container{max-width:640px;margin:0 auto;padding:0 16px;}
+
+  /* ================= STICKY TOP BAR ================= */
+  .sticky-bar{
+    position:fixed;
+    top:0;left:0;right:0;
+    z-index:999;
+    background:linear-gradient(90deg,var(--black) 0%, #2a2013 50%, var(--black) 100%);
+    border-bottom:2px solid var(--gold);
+    padding:9px 14px;
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:10px;
+  }
+  .sticky-bar .brand{
+    color:var(--gold-light);
+    font-weight:800;
+    font-size:14px;
+    font-family:'Cairo',sans-serif;
+    white-space:nowrap;
+  }
+  .btn-cta{
+    display:inline-flex;
+    align-items:center;
+    justify-content:center;
+    gap:8px;
+    background:linear-gradient(180deg, var(--gold-light), var(--gold) 60%, var(--gold-deep));
+    color:var(--black);
+    font-family:'Cairo', sans-serif;
+    font-weight:800;
+    border:none;
+    border-radius:999px;
+    cursor:pointer;
+    text-decoration:none;
+    box-shadow:0 4px 14px rgba(201,162,39,0.45);
+    transition:transform .15s ease, box-shadow .15s ease;
+  }
+  .btn-cta:active{transform:scale(0.97);}
+  .btn-cta.btn-green{
+    background:linear-gradient(180deg, #34d94a, #1fa32e);
+    color:#fff;
+    box-shadow:0 4px 14px rgba(31,163,46,0.45);
+  }
+  .sticky-bar .btn-cta{
+    padding:9px 16px;
+    font-size:13px;
+    white-space:nowrap;
+  }
+
+  /* ================= HERO / IMAGES SECTION ================= */
+  .hero-lead{
+    position:relative;
+    overflow:hidden;
+    text-align:center;
+    min-height:340px;
+    display:flex;
+    align-items:flex-end;
+    background:var(--black);
+    color:var(--cream);
+  }
+  .hero-slider{
+    position:absolute;
+    inset:0;
+    z-index:0;
+  }
+  .hero-slider .slide{
+    position:absolute;
+    inset:0;
+    background-size:cover;
+    background-position:center 22%;
+    opacity:0;
+    transition:opacity 1.4s ease;
+  }
+  .hero-slider .slide.active{opacity:1;}
+  .hero-overlay{
+    position:absolute;
+    inset:0;
+    z-index:1;
+    background:linear-gradient(180deg, rgba(20,16,11,0.25) 0%, rgba(20,16,11,0.65) 55%, var(--black) 96%);
+  }
+  .hero-content{
+    position:relative;
+    z-index:2;
+    width:100%;
+    padding:26px 18px 18px;
+  }
+  .hero-content .eyebrow{
+    color:var(--gold-light);
+    letter-spacing:2px;
+    font-size:12px;
+    font-weight:700;
+    display:block;
+    margin-bottom:8px;
+  }
+  .hero-content h1{
+    font-size:26px;
+    font-weight:900;
+    color:var(--gold-light);
+    margin-bottom:8px;
+    text-shadow:0 2px 10px rgba(0,0,0,0.5);
+  }
+  .hero-content p{
+    font-size:14.5px;
+    color:#e9dfc6;
+    max-width:420px;
+    margin:0 auto;
+    text-shadow:0 1px 6px rgba(0,0,0,0.5);
+  }
+
+  .img-block{width:100%;}
+  .img-block img{width:100%;height:auto;}
+
+  .cta-row{
+    padding:20px 16px;
+    text-align:center;
+    background:var(--cream);
+  }
+  .cta-row.dark{
+    background:linear-gradient(180deg, var(--black-2), var(--black));
+  }
+  .btn-big{
+    padding:16px 30px;
+    font-size:16.5px;
+    width:100%;
+    max-width:420px;
+  }
+
+  .divider{
+    display:flex;
+    align-items:center;
+    gap:10px;
+    padding:16px 24px 4px;
+    background:var(--cream);
+  }
+  .divider .line{flex:1;height:1px;background:linear-gradient(90deg, transparent, var(--gold), transparent);}
+  .divider .diamond{width:8px;height:8px;background:var(--gold);transform:rotate(45deg);}
+
+  /* ================= ORDER FORM ================= */
+  #order{
+    background:linear-gradient(180deg, #201808, var(--black) 40%);
+    padding:34px 16px 46px;
+  }
+  .order-card{
+    max-width:480px;
+    margin:0 auto;
+    background:var(--cream);
+    border-radius:var(--radius);
+    box-shadow:var(--shadow);
+    overflow:hidden;
+    border:2px solid var(--gold);
+  }
+  .order-head{
+    background:linear-gradient(135deg, var(--gold-light), var(--gold));
+    padding:18px 20px;
+    text-align:center;
+  }
+  .order-head h2{
+    font-size:19px;
+    color:var(--black);
+    font-weight:900;
+  }
+  .order-head p{
+    font-size:12.5px;
+    color:#3a2e10;
+    margin-top:3px;
+  }
+  .order-body{padding:20px;}
+
+  .product-line{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#fff;
+    border:1px solid var(--cream-2);
+    border-radius:10px;
+    padding:12px;
+    margin-bottom:12px;
+  }
+  .product-line img{
+    width:58px;height:58px;object-fit:cover;border-radius:8px;
+    border:1px solid var(--cream-2);
+  }
+  .product-line .info{flex:1;}
+  .product-line .info .name{font-weight:800;font-size:14.5px;color:var(--text-dark);}
+  .product-line .info .price{color:var(--gold-deep);font-weight:800;font-size:14px;margin-top:2px;}
+  .product-line .info .tag-free{
+    display:inline-block;
+    background:var(--danger);
+    color:#fff;
+    font-size:10.5px;
+    font-weight:800;
+    padding:2px 8px;
+    border-radius:999px;
+    margin-top:4px;
+  }
+
+  .qty-control{
+    display:flex;
+    align-items:center;
+    gap:8px;
+    background:var(--cream);
+    border-radius:8px;
+    padding:4px;
+  }
+  .qty-control button{
+    width:30px;height:30px;
+    border:none;
+    background:var(--black);
+    color:var(--gold-light);
+    font-size:18px;
+    font-weight:800;
+    border-radius:6px;
+    cursor:pointer;
+    line-height:1;
+  }
+  .qty-control span{
+    min-width:22px;
+    text-align:center;
+    font-weight:800;
+    font-size:15px;
+  }
+
+  .addon-line{
+    display:flex;
+    align-items:center;
+    gap:12px;
+    background:#fff8e8;
+    border:1.5px dashed var(--gold);
+    border-radius:10px;
+    padding:12px;
+    margin-bottom:16px;
+    cursor:pointer;
+  }
+  .addon-line img{
+    width:52px;height:52px;object-fit:cover;border-radius:8px;
+  }
+  .addon-line .info{flex:1;}
+  .addon-line .info .name{font-weight:800;font-size:13.5px;}
+  .addon-line .info .price{font-size:12.5px;color:var(--text-soft);margin-top:2px;}
+  .addon-line .info .price strong{color:var(--gold-deep);font-size:14px;}
+  .addon-line input[type="checkbox"]{
+    width:22px;height:22px;accent-color:var(--gold-deep);flex-shrink:0;
+  }
+
+  .total-box{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    background:var(--black);
+    color:var(--gold-light);
+    border-radius:10px;
+    padding:14px 16px;
+    margin-bottom:18px;
+  }
+  .total-box .label{font-size:13.5px;font-weight:700;color:#d9cba8;}
+  .total-box .amount{font-size:22px;font-weight:900;font-family:'Cairo',sans-serif;}
+
+  .field{margin-bottom:13px;}
+  .field label{
+    display:block;
+    font-size:13px;
+    font-weight:700;
+    margin-bottom:5px;
+    color:var(--text-dark);
+  }
+  .field label .req{color:var(--danger);}
+  .field input{
+    width:100%;
+    padding:12px 13px;
+    border:1.5px solid #ddd0ac;
+    border-radius:8px;
+    font-family:'Tajawal',sans-serif;
+    font-size:14.5px;
+    background:#fff;
+    transition:border-color .15s ease, box-shadow .15s ease;
+  }
+  .field input:focus{
+    outline:none;
+    border-color:var(--gold-deep);
+    box-shadow:0 0 0 3px rgba(201,162,39,0.18);
+  }
+  .field input.error{
+    border-color:var(--danger);
+    box-shadow:0 0 0 3px rgba(179,38,30,0.15);
+  }
+  .field .err-msg{
+    display:none;
+    color:var(--danger);
+    font-size:12px;
+    font-weight:700;
+    margin-top:4px;
+  }
+  .field.has-error .err-msg{display:block;}
+
+  .btn-whatsapp{
+    width:100%;
+    margin-top:8px;
+    padding:16px;
+    font-size:16px;
+    background:linear-gradient(180deg, #34d94a, #1fa32e);
+    color:#fff;
+    box-shadow:0 6px 18px rgba(31,163,46,0.4);
+  }
+  .btn-whatsapp svg{width:20px;height:20px;fill:#fff;}
+
+  .trust-note{
+    text-align:center;
+    font-size:12px;
+    color:var(--text-soft);
+    margin-top:12px;
+  }
+
+  footer{
+    text-align:center;
+    padding:20px 16px 30px;
+    background:var(--black);
+    color:#8a7c58;
+    font-size:11.5px;
+  }
+
+  @media (min-width:480px){
+    .sticky-bar .brand{font-size:16px;}
+    .hero-content h1{font-size:30px;}
+    .hero-lead{min-height:460px;}
+  }
+</style>
+</head>
+<body>
+
+<!-- ================= STICKY TOP BAR ================= -->
+<div class="sticky-bar">
+  <span class="brand">GIORDANI GOLD ✦ ESSENZA</span>
+  <a href="#order" class="btn-cta btn-green" onclick="scrollToOrder(event)">تواصل معنا</a>
+</div>
+
+<!-- ================= HERO LEAD (سلايدر خلفية) ================= -->
+<section class="hero-lead">
+  <div class="hero-slider" id="heroSlider"></div>
+  <div class="hero-overlay"></div>
+  <div class="hero-content">
+    <span class="eyebrow">ORIFLAME SWEDEN — إصدار فاخر</span>
+    <h1>جيورداني جولد إسينزا</h1>
+    <p>عطر فاخر يوقظ أنوثتك ويترك أثر لا يُنسى — مع هدية كريم الجسم المعطر فـ عرض خاص لمدة محدودة.</p>
+  </div>
+</section>
+
+<!-- زر بارز قبل أول صورة -->
+<div class="cta-row dark">
+  <a href="#order" class="btn-cta btn-big" onclick="scrollToOrder(event)">اضغط هنا للطلب</a>
+</div>
+
+<!-- ================= صورة 1 ================= -->
+<div class="img-block">
+  <img src="images/img1.png" alt="جيورداني جولد إسينزا - عطر فاخر" loading="lazy">
+</div>
+
+<div class="divider"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+<!-- زر بين الصورة 1 و 2 -->
+<div class="cta-row">
+  <a href="#order" class="btn-cta btn-big" onclick="scrollToOrder(event)">اضغط هنا للطلب</a>
+</div>
+
+<!-- ================= صورة 2 ================= -->
+<div class="img-block">
+  <img src="images/img2.png" alt="جيورداني جولد إسينزا لكل امرأة" loading="lazy">
+</div>
+
+<div class="divider"><span class="line"></span><span class="diamond"></span><span class="line"></span></div>
+
+<!-- زر بين الصورة 2 و 3 -->
+<div class="cta-row">
+  <a href="#order" class="btn-cta btn-big" onclick="scrollToOrder(event)">اضغط هنا للطلب</a>
+</div>
+
+<!-- ================= صورة 3 ================= -->
+<div class="img-block">
+  <img src="images/img3.png" alt="جيورداني جولد إسينزا - مكونات نادرة وكريم الجسم" loading="lazy">
+</div>
+
+<!-- زر بعد آخر صورة -->
+<div class="cta-row dark">
+  <a href="#order" class="btn-cta btn-big" onclick="scrollToOrder(event)">اضغط هنا للطلب</a>
+</div>
+
+<!-- ================= فورم الطلب ================= -->
+<section id="order">
+  <div class="order-card">
+    <div class="order-head">
+      <h2>عمر معلوماتك ونحن نتصلو بيك</h2>
+      <p>الخلاص عند الاستلام • توصيل لجميع مدن المغرب</p>
+    </div>
+
+    <div class="order-body">
+
+      <!-- المنتج الرئيسي -->
+      <div class="product-line">
+        <img src="images/img1.png" alt="عطر جيورداني جولد إسينزا" style="object-position:22% 42%;">
+        <div class="info">
+          <div class="name">عطر جيورداني جولد إسينزا</div>
+          <div class="price" id="unitPriceLabel">379 درهم / وحدة</div>
+        </div>
+        <div class="qty-control">
+          <button type="button" onclick="changeQty(-1)">−</button>
+          <span id="qtyValue">1</span>
+          <button type="button" onclick="changeQty(1)">+</button>
+        </div>
+      </div>
+
+      <!-- المنتج الإضافي (كريم الجسم) -->
+      <label class="addon-line" for="addonCheck">
+        <img src="images/img1.png" alt="كريم الجسم المعطر جيورداني جولد إسينزا" style="object-position:78% 55%;">
+        <div class="info">
+          <div class="name">كريم الجسم المعطر جيورداني جولد <span class="tag-free">عرض خاص</span></div>
+          <div class="price">قيمته <s>159 درهم</s> — زيديه معايا بـ <strong>89 درهم</strong> فقط</div>
+        </div>
+        <input type="checkbox" id="addonCheck" onchange="updateTotal()">
+      </label>
+
+      <!-- الإجمالي -->
+      <div class="total-box">
+        <span class="label">المجموع الكلي</span>
+        <span class="amount" id="totalAmount">379 درهم</span>
+      </div>
+
+      <!-- الحقول -->
+      <div class="field" id="f-name">
+        <label>الاسم الكامل <span class="req">*</span></label>
+        <input type="text" id="custName" placeholder="سميتك الكاملة">
+        <div class="err-msg">عافاك عمر هاد الحقل</div>
+      </div>
+
+      <div class="field" id="f-address">
+        <label>العنوان الكامل <span class="req">*</span></label>
+        <input type="text" id="custAddress" placeholder="الحي، الشارع، رقم الدار">
+        <div class="err-msg">عافاك عمر هاد الحقل</div>
+      </div>
+
+      <div class="field" id="f-phone">
+        <label>رقم الهاتف (واتساب) <span class="req">*</span></label>
+        <input type="tel" id="custPhone" placeholder="06XXXXXXXX">
+        <div class="err-msg">عافاك دخل رقم صحيح</div>
+      </div>
+
+      <div class="field" id="f-city">
+        <label>المدينة <span class="req">*</span></label>
+        <input type="text" id="custCity" placeholder="مثال: الدار البيضاء">
+        <div class="err-msg">عافاك عمر هاد الحقل</div>
+      </div>
+
+      <button type="button" class="btn-cta btn-whatsapp" onclick="confirmOrder()">
+        <svg viewBox="0 0 32 32"><path d="M16.001 3C9.107 3 3.5 8.607 3.5 15.5c0 2.31.632 4.474 1.732 6.334L3 29l7.36-2.183A12.44 12.44 0 0016 28c6.894 0 12.5-5.607 12.5-12.5S22.895 3 16.001 3zm0 22.688a10.16 10.16 0 01-5.181-1.417l-.372-.221-4.368 1.295 1.318-4.253-.242-.389a10.148 10.148 0 01-1.593-5.503c0-5.632 4.583-10.215 10.216-10.215 5.631 0 10.215 4.583 10.215 10.215.001 5.633-4.583 10.216-10.215 10.216zm5.596-7.656c-.306-.153-1.81-.892-2.09-.994-.28-.102-.484-.153-.688.153-.204.306-.79.993-.969 1.198-.178.204-.357.229-.663.076-.306-.153-1.293-.477-2.464-1.522-.911-.812-1.526-1.815-1.705-2.121-.178-.306-.019-.472.134-.624.138-.137.306-.357.459-.535.153-.178.204-.306.306-.51.102-.204.05-.383-.026-.535-.076-.153-.688-1.658-.943-2.271-.248-.598-.5-.517-.688-.526l-.586-.01c-.204 0-.535.076-.815.383-.28.306-1.068 1.044-1.068 2.548 0 1.503 1.093 2.956 1.245 3.16.153.204 2.15 3.283 5.208 4.604.728.314 1.295.502 1.738.643.73.232 1.394.199 1.919.121.585-.087 1.81-.74 2.065-1.454.255-.714.255-1.325.178-1.454-.076-.128-.28-.204-.586-.357z"/></svg>
+        أكّد الطلبية عبر واتساب
+      </button>
+
+      <p class="trust-note">✓ منتج أصلي 100% &nbsp; ✓ الخلاص عند الاستلام &nbsp; ✓ خدمة الزبناء 7/7</p>
+    </div>
+  </div>
+</section>
+
+<footer>
+  © جيورداني جولد إسينزا — Oriflame Sweden. جميع الحقوق محفوظة.
+</footer>
+
+<script>
+  // ============================================================
+  // ⚙️ الإعدادات — عمر هادشي قبل النشر
+  // ============================================================
+  const UNIT_PRICE   = 379;   // ثمن العطر للوحدة الواحدة (بالدرهم)
+  const ADDON_PRICE  = 89;    // ثمن كريم الجسم كعرض إضافي (بالدرهم) - بدل 159 درهم
+  const ADDON_NAME   = "كريم الجسم المعطر جيورداني جولد";
+  const PRODUCT_NAME = "عطر جيورداني جولد إسينزا";
+
+  const WHATSAPP_NUMBER = "212607393367";
+
+  // ================= سلايدر الخلفية (Hero) =================
+  // زيد تصاور آخرين هنا فالمستقبل باش يدخلو فالتدوير التلقائي
+  const HERO_SLIDES = ["images/img4.png"];
+
+  (function initHeroSlider(){
+    const wrap = document.getElementById('heroSlider');
+    HERO_SLIDES.forEach((src, i) => {
+      const slide = document.createElement('div');
+      slide.className = 'slide' + (i === 0 ? ' active' : '');
+      slide.style.backgroundImage = `url('${src}')`;
+      wrap.appendChild(slide);
+    });
+    if(HERO_SLIDES.length > 1){
+      let current = 0;
+      setInterval(() => {
+        const slides = wrap.querySelectorAll('.slide');
+        slides[current].classList.remove('active');
+        current = (current + 1) % slides.length;
+        slides[current].classList.add('active');
+      }, 4500);
+    }
+  })();
+
+  let qty = 1;
+
+  function changeQty(delta){
+    qty = Math.max(1, qty + delta);
+    document.getElementById('qtyValue').textContent = qty;
+    updateTotal();
+  }
+
+  function updateTotal(){
+    const addonChecked = document.getElementById('addonCheck').checked;
+    let total = UNIT_PRICE * qty;
+    if(addonChecked) total += ADDON_PRICE;
+    document.getElementById('totalAmount').textContent = total + " درهم";
+  }
+
+  function scrollToOrder(e){
+    e.preventDefault();
+    document.getElementById('order').scrollIntoView({behavior:'smooth'});
+  }
+
+  function validateField(id, value){
+    const wrap = document.getElementById(id);
+    if(!value || value.trim() === ""){
+      wrap.classList.add('has-error');
+      wrap.querySelector('input').classList.add('error');
+      return false;
+    }
+    wrap.classList.remove('has-error');
+    wrap.querySelector('input').classList.remove('error');
+    return true;
+  }
+
+  function confirmOrder(){
+    const name    = document.getElementById('custName').value;
+    const address = document.getElementById('custAddress').value;
+    const phone   = document.getElementById('custPhone').value;
+    const city    = document.getElementById('custCity').value;
+
+    const validName    = validateField('f-name', name);
+    const validAddress = validateField('f-address', address);
+    const validPhone   = validateField('f-phone', phone) && phone.replace(/\D/g,'').length >= 9;
+    const validCity    = validateField('f-city', city);
+
+    if(!validPhone && phone.trim() !== ""){
+      document.getElementById('f-phone').classList.add('has-error');
+      document.getElementById('custPhone').classList.add('error');
+    }
+
+    if(!validName || !validAddress || !validPhone || !validCity){
+      const firstError = document.querySelector('.has-error');
+      if(firstError) firstError.scrollIntoView({behavior:'smooth', block:'center'});
+      return;
+    }
+
+    const addonChecked = document.getElementById('addonCheck').checked;
+    let total = UNIT_PRICE * qty;
+    let addonLine = "";
+    if(addonChecked){
+      total += ADDON_PRICE;
+      addonLine = `🎁 ${ADDON_NAME} × 1 — ${ADDON_PRICE} درهم (بدل 159 درهم)\n`;
+    }
+
+    // Meta Pixel — Lead event
+    if(typeof fbq === 'function'){
+      fbq('track', 'Lead', {
+        content_name: PRODUCT_NAME,
+        value: total,
+        currency: 'MAD',
+        num_items: qty
+      });
+    }
+
+    const message =
+`🛍️ طلبية جديدة
+
+🌸 ${PRODUCT_NAME} × ${qty} — ${UNIT_PRICE * qty} درهم
+${addonLine}💰 المجموع الكلي: ${total} درهم
+
+👤 الاسم: ${name}
+📍 العنوان: ${address}
+🏙️ المدينة: ${city}
+📞 الهاتف: ${phone}`;
+
+    const url = `https://wa.me/${WHATSAPP_NUMBER}?text=${encodeURIComponent(message)}`;
+    window.open(url, '_blank');
+  }
+</script>
+
+</body>
+</html>
