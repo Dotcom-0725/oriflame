@@ -391,9 +391,82 @@
     .hero-content h1{font-size:30px;}
     .hero-lead{min-height:460px;}
   }
+
+  /* ================= شريط التفعيل (Activation Ribbon) ================= */
+  .activation-ribbon{
+    position:fixed;
+    inset:0;
+    z-index:100000;
+    pointer-events:none;
+    overflow:hidden;
+  }
+  .activation-ribbon .bar{
+    position:absolute;
+    top:50%;
+    left:50%;
+    width:260vw;
+    transform:translate(-50%,-50%) rotate(-38deg);
+    background:linear-gradient(90deg, #b3261e, #e14c3e 50%, #b3261e);
+    color:#fff;
+    padding:14px 0;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    box-shadow:0 6px 22px rgba(0,0,0,0.5);
+    border-top:2px solid rgba(255,255,255,0.5);
+    border-bottom:2px solid rgba(255,255,255,0.5);
+  }
+  .activation-ribbon .bar .chunk{
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+    justify-content:center;
+    white-space:nowrap;
+    padding:0 34px;
+    font-family:'Cairo', sans-serif;
+    line-height:1.5;
+  }
+  .activation-ribbon .bar .chunk .l1{
+    font-size:11px;
+    font-weight:700;
+    letter-spacing:0.3px;
+  }
+  .activation-ribbon .bar .chunk .l2{
+    font-size:16px;
+    font-weight:900;
+    letter-spacing:1px;
+  }
+  .activation-ribbon .bar .chunk .l3{
+    font-size:14px;
+    font-weight:800;
+    letter-spacing:0.5px;
+    direction:ltr;
+  }
+  @media (min-width:480px){
+    .activation-ribbon .bar{padding:20px 0;}
+    .activation-ribbon .bar .chunk .l1{font-size:14px;}
+    .activation-ribbon .bar .chunk .l2{font-size:20px;}
+    .activation-ribbon .bar .chunk .l3{font-size:17px;}
+  }
 </style>
 </head>
 <body>
+
+<!-- ================= شريط التفعيل ================= -->
+<div class="activation-ribbon" aria-hidden="true">
+  <div class="bar">
+    <div class="chunk">
+      <span class="l1">لتفعيل صفحتك المرجو التواصل مع مطور هذا الموقع :</span>
+      <span class="l2">Rachid DecWorks</span>
+      <span class="l3">0628537649</span>
+    </div>
+    <div class="chunk">
+      <span class="l1">لتفعيل صفحتك المرجو التواصل مع مطور هذا الموقع :</span>
+      <span class="l2">Rachid DecWorks</span>
+      <span class="l3">0628537649</span>
+    </div>
+  </div>
+</div>
 
 <!-- ================= STICKY TOP BAR ================= -->
 <div class="sticky-bar">
